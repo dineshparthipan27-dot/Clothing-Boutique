@@ -80,7 +80,7 @@
             width: 100%;
         }
 
-         
+
         .sidebar {
             width: 280px;
             background-color: var(--bg-card);
@@ -217,7 +217,7 @@
             transform: translateX(5px);
         }
 
-         
+
         .main-content {
             flex: 1;
             margin-left: 280px;
@@ -265,6 +265,16 @@
             align-items: center;
             gap: 15px;
         }
+             .user-profile1 {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            justify-content: center;
+            gap: 15px;
+        }
+        #displayUser1{
+            text-align: start;
+        }
 
         .user-info {
             text-align: right;
@@ -298,7 +308,7 @@
             object-fit: cover;
         }
 
-         
+
         .view-section {
             display: none;
             padding: 40px;
@@ -350,7 +360,7 @@
             font-size: 18px;
         }
 
-         
+
         .card {
             background: var(--bg-card);
             border-radius: 16px;
@@ -365,7 +375,7 @@
             border-color: rgba(212, 175, 55, 0.3);
         }
 
-         
+
         .overview-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -549,7 +559,7 @@
             color: var(--text-muted);
         }
 
-         
+
         .orders-stats-row {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -633,7 +643,7 @@
             border: 1px solid var(--border-soft);
         }
 
-         
+
         .tracker {
             display: flex;
             justify-content: space-between;
@@ -700,7 +710,7 @@
             color: var(--text-dark);
         }
 
-         
+
         .styled-table {
             width: 100%;
             border-collapse: collapse;
@@ -747,7 +757,7 @@
             color: var(--info);
         }
 
-         
+
         .collection-tabs {
             display: flex;
             gap: 15px;
@@ -884,7 +894,7 @@
             color: #fff;
         }
 
-         
+
         .waitlist-card {
             background: #f8fafc;
             border: 1px dashed #cbd5e1;
@@ -903,14 +913,14 @@
             opacity: 0.7;
         }
 
-         
+
         .address-layout {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
         }
 
-         
+
         .form-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -989,7 +999,7 @@
             gap: 10px;
         }
 
-         
+
         .saved-addr-card {
             border: 1px solid var(--border-soft);
             padding: 20px;
@@ -1040,7 +1050,7 @@
             color: var(--danger);
         }
 
-         
+
         .cc-card {
             background: linear-gradient(135deg, #1f2937 0%, #0f172a 100%);
             color: #fff;
@@ -1096,7 +1106,7 @@
             align-items: center;
         }
 
-         
+
         .support-layout {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -1191,7 +1201,7 @@
             color: #fff;
         }
 
-         
+
         .ticket-list {
             display: flex;
             flex-direction: column;
@@ -1218,7 +1228,7 @@
             color: var(--text-muted);
         }
 
-         
+
         @media (max-width: 1024px) {
 
             .overview-grid,
@@ -1314,6 +1324,9 @@
                 height: 50%;
                 width: 3px;
             }
+            .top-header .user-profile{
+                display: none;
+            }
         }
 
 
@@ -1338,20 +1351,37 @@
         .logo-da i {
             font-size: 28px;
         }
+
+        @media (max-width:568px) {
+            .welcome-hero {
+                padding: 20px;
+            }
+
+            .page-title {
+                font-size: 18px;
+            }
+
+            .top-header {
+                gap: 10px;
+            }
+            .collection-tabs{
+                flex-wrap: wrap;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="dashboard-container">
 
-         
+
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-         
+
         <aside class="sidebar" id="sidebar">
             <div>
                 <div class="sidebar-header">
-                      <a href="admin.html" class="logo-da">
+                    <a href="admin.html" class="logo-da">
                         <img src="./asset/logo.webp" alt="Company Logo" class="logo-img">
                     </a>
                     <button class="close-btn" id="closeSidebar"><i class="fa-solid fa-xmark"></i></button>
@@ -1368,6 +1398,13 @@
                     <li><a class="menu-link" data-target="view-support"><i class="fa-solid fa-bell-concierge"></i>
                             Support & Concierge</a></li>
                 </ul>
+            </div>
+            <div class="user-profile1">
+                <div class="user-info">
+                    <span class="user-name" id="displayUser1">Sarah Jenkins</span>
+                    <span class="user-name" id="displayemail"></span>
+                </div>
+                <img src="./asset/woman1.webp" alt="User" class="avatar">
             </div>
             <div class="sidebar-bottom">
                 <a href="login.html" class="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign
@@ -1532,7 +1569,7 @@
                             <p style="font-size: 14px; font-weight: 500; color: var(--text-dark);">Estimated Delivery:
                                 Oct 15, 2026</p>
 
-                             
+
                             <div class="tracker">
                                 <div class="tracker-bar" style="width: 50%;"></div>
                                 <div class="track-step active">
@@ -1774,7 +1811,7 @@
 
                 <div class="support-layout">
                     <div>
-                         
+
                         <div class="card scroll-anim" style="margin-bottom: 30px;">
                             <h3 class="section-heading"><i class="fa-regular fa-circle-question"></i> Frequently Asked
                                 Questions</h3>
@@ -1823,7 +1860,7 @@
                     </div>
 
                     <div>
-                         
+
                         <div class="contact-box scroll-anim" style="margin-bottom: 30px;">
                             <i class="fa-solid fa-headset"></i>
                             <h3>Need Personal Assistance?</h3>
@@ -1834,7 +1871,7 @@
                                     style="color:var(--gold-main);">vip@luxe.com</strong></p>
                         </div>
 
-                         
+
                         <div class="card scroll-anim">
                             <h3 class="section-heading"><i class="fa-solid fa-video"></i> Virtual Stylist</h3>
                             <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 15px;">Book a 30-min
@@ -1853,7 +1890,7 @@
     </div>
 
     <script>
- 
+
         document.addEventListener("DOMContentLoaded", function () {
             const emailValue = localStorage.getItem("UserMail");
             const activeEmail = emailValue || "sarah.j@elite.com";
@@ -1861,13 +1898,16 @@
             const formattedName = extractedName.charAt(0).toUpperCase() + extractedName.slice(1);
 
             document.getElementById("displayUser").textContent = formattedName;
+            document.getElementById("displayUser1").textContent = formattedName;
             const welcomeEl = document.getElementById("welcomeMsg");
             if (welcomeEl) {
                 welcomeEl.innerHTML = `Hello, <span style="color: var(--gold-light);">${formattedName}.</span>`;
             }
+            const email = document.getElementById('displayemail');
+            email.innerHTML = activeEmail
         });
 
- 
+
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('sidebarOverlay');
         function openSidebar() { sidebar.classList.add('active'); overlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
@@ -1876,7 +1916,7 @@
         document.getElementById('closeSidebar').addEventListener('click', closeSidebar);
         overlay.addEventListener('click', closeSidebar);
 
- 
+
         const menuLinks = document.querySelectorAll('.sidebar-menu .menu-link');
         const views = document.querySelectorAll('.view-section');
         const pageTitle = document.getElementById('pageTitle');
@@ -1899,7 +1939,7 @@
             });
         });
 
- 
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('show'); });
         }, { threshold: 0.1 });
@@ -1912,7 +1952,7 @@
         }
         triggerAnimations();
 
- 
+
         const faqItems = document.querySelectorAll('.faq-item');
         faqItems.forEach(item => {
             item.querySelector('.faq-question').addEventListener('click', () => {
@@ -1921,7 +1961,7 @@
             });
         });
 
- 
+
         document.getElementById('addressForm').addEventListener('submit', function (e) {
             e.preventDefault();
             let isValid = true;
