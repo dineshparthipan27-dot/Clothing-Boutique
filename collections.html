@@ -7,7 +7,6 @@
     <title>Collections</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <link rel="stylesheet" href="collections.css">
     <link rel="stylesheet" href="clothing.css">
 </head>
@@ -59,9 +58,7 @@
     </nav>
 
 
-    <!-- =========================================
-     Section 1: Premium Collections Slider (Center Aligned)
-     ========================================= -->
+   
     <section id="collections-slider" class="premium-slider-section">
 
          
@@ -118,9 +115,7 @@
     </section>
 
 
-    <!-- =========================================
-     Section 2: Curated Categories (Filter)
-     ========================================= -->
+   
     <section id="categories" class="premium-filter-section">
         <div class="container">
 
@@ -252,9 +247,7 @@
 
 
 
-    <!-- =========================================
-     Section 3: Signature Masterpieces (White Theme)
-     ========================================= -->
+  
     <section id="bestsellers" class="premium-bestsellers-section-white">
         <div class="container">
 
@@ -359,9 +352,7 @@
     </section>
 
 
-    <!-- =========================================
-     Section 4: Bespoke Exclusives (White Theme & Overlap Design)
-     ========================================= -->
+ 
     <section id="bespoke" class="premium-bespoke-white">
         <div class="container bespoke-container">
 
@@ -427,9 +418,7 @@
     </section>
 
 
-    <!-- =========================================
-     Section 5: Runway Inspirations (Style Gallery)
-     ========================================= -->
+   
     <section id="gallery" class="premium-gallery-section">
         <div class="container">
 
@@ -515,9 +504,6 @@
 
 
 
-    <!-- =========================================
-     Section 6: The Vault (Limited Editions)
-     ========================================= -->
     <section id="vault" class="premium-vault-section">
         <div class="container">
 
@@ -610,9 +596,6 @@
 
 
 
-    <!-- =========================================
-     Section 7: Unlock The Catalog (CTA with Image & Validation)
-     ========================================= -->
     <section id="catalog-cta" class="premium-cta-section">
 
          
@@ -867,7 +850,7 @@
                             item.style.display = 'block';
  
                             item.style.animation = 'none';
-                            item.offsetHeight; // trigger reflow
+                            item.offsetHeight; 
                             item.style.animation = null;
                         } else {
                             item.style.display = 'none';
@@ -888,7 +871,7 @@
 
             if (catalogForm) {
                 catalogForm.addEventListener('submit', function (e) {
-                    e.preventDefault(); // Prevents page reload
+                    e.preventDefault(); 
 
                     const emailInput = document.getElementById('catalogEmail').value.trim();
                     const errorMsg = document.getElementById('ctaErrorMsg');

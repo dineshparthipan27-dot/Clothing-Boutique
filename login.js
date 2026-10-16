@@ -1,8 +1,3 @@
- 
- 
- 
-
- 
 const loginBtn = document.getElementById("loginBtn");
 const signupBtn = document.getElementById("signupBtn");
 const loginForm = document.getElementById("loginForm");
@@ -10,7 +5,7 @@ const signupForm = document.getElementById("signupForm");
 const showSignup = document.getElementById("showSignup");
 const showLogin = document.getElementById("showLogin");
 
- 
+
 function showLoginForm() {
     loginForm.classList.remove("hidden");
     signupForm.classList.add("hidden");
@@ -30,7 +25,7 @@ signupBtn.addEventListener("click", showSignupForm);
 showSignup.addEventListener("click", showSignupForm);
 showLogin.addEventListener("click", showLoginForm);
 
- 
+
 document.querySelectorAll(".toggle-password").forEach(icon => {
     icon.addEventListener("click", () => {
         const input = icon.previousElementSibling;
@@ -46,7 +41,7 @@ document.querySelectorAll(".toggle-password").forEach(icon => {
     });
 });
 
- 
+
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!\%*?&]).{8,}$/;
 
@@ -82,7 +77,7 @@ function resetButton(button) {
     button.innerHTML = button.dataset.text;
 }
 
- 
+
 document.querySelectorAll('input, select').forEach(input => {
     input.addEventListener('input', function () {
         this.classList.remove('input-error');
@@ -96,7 +91,7 @@ document.querySelectorAll('input, select').forEach(input => {
     });
 });
 
- 
+
 window.addEventListener("DOMContentLoaded", () => {
     const savedMail = localStorage.getItem("rememberEmail");
     if (savedMail) {
@@ -105,7 +100,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 });
 
- 
+
 loginForm.addEventListener("submit", function (e) {
     e.preventDefault();
     let isValid = true;
@@ -145,7 +140,7 @@ loginForm.addEventListener("submit", function (e) {
     localStorage.setItem("UserMail", email);
     localStorage.setItem("UserRole", role);
 
- 
+
     setTimeout(() => {
         resetButton(loginButton);
         if (role === "admin") {
@@ -156,7 +151,7 @@ loginForm.addEventListener("submit", function (e) {
     }, 1200);
 });
 
- 
+
 signupForm.addEventListener("submit", function (e) {
     e.preventDefault();
     let isValid = true;
@@ -199,7 +194,7 @@ signupForm.addEventListener("submit", function (e) {
     const user = { name: name, email: email, password: password, role: role };
     localStorage.setItem("registeredUser", JSON.stringify(user));
 
- 
+
     setTimeout(() => {
         resetButton(signupButton);
         signupForm.reset();

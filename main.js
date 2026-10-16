@@ -4,7 +4,7 @@ const icon = hamburger.querySelector('i');
 const navItems = document.querySelectorAll('.nav-links li a');
 const sections = document.querySelectorAll('section');
 
- 
+
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 
@@ -19,7 +19,7 @@ hamburger.addEventListener('click', () => {
     }
 });
 
- 
+
 navItems.forEach(item => {
     item.addEventListener('click', () => {
         navLinks.classList.remove('active');
@@ -29,7 +29,7 @@ navItems.forEach(item => {
     });
 });
 
- 
+
 window.addEventListener('scroll', () => {
     let current = '';
 
@@ -37,13 +37,13 @@ window.addEventListener('scroll', () => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
 
- 
+
         if (pageYOffset >= (sectionTop - 80)) {
             current = section.getAttribute('id');
         }
     });
 
-    
+
 });
 
 
@@ -51,13 +51,13 @@ window.addEventListener('scroll', () => {
 
 
 
- 
- 
- 
+
+
+
 const scrollTopBtn = document.getElementById('scroll-top-btn');
 
 window.addEventListener('scroll', () => {
- 
+
     if (window.pageYOffset > 300) {
         scrollTopBtn.classList.add('show');
     } else {
@@ -65,7 +65,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
- 
+
 scrollTopBtn.addEventListener('click', function (e) {
     e.preventDefault();
     window.scrollTo({
@@ -76,14 +76,14 @@ scrollTopBtn.addEventListener('click', function (e) {
 
 
 
- 
- 
- 
-document.addEventListener("DOMContentLoaded", function() {
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
     const lenis = new Lenis({
-        duration: 1.2, // ஸ்க்ரோலிங் ஸ்பீடு (கம்மியா வச்சா இன்னும் மெதுவா போகும்)
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth curve
-        direction: 'vertical', 
+        duration: 1.2, 
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+        direction: 'vertical',
         gestureDirection: 'vertical',
         smooth: true,
         mouseMultiplier: 1,
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
         infinite: false,
     });
 
- 
+
     function raf(time) {
         lenis.raf(time);
         requestAnimationFrame(raf);
@@ -103,30 +103,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
- 
- 
- 
-window.addEventListener('load', function() {
+
+
+
+window.addEventListener('load', function () {
     const preloader = document.getElementById('luxe-preloader');
-    
-    if(preloader) {
-       
+
+    if (preloader) {
+
         setTimeout(() => {
-            
- 
+
+
             preloader.classList.add('fade-content');
-            
- 
+
+
             setTimeout(() => {
                 preloader.classList.add('slide-up');
-                
- 
+
+
                 setTimeout(() => {
                     preloader.style.display = 'none';
-                }, 800); 
-                
-            }, 400); // 400ms delay after content fades
-            
-        }, 1500); // Waits 1.5 seconds before starting the exit process
+                }, 800);
+
+            }, 400); 
+
+        }, 1500); 
     }
 });
