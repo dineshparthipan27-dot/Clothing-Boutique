@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Luxe Boutique | VIP Portal</title>
+
+     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+     
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+     
+    <div class="luxe-bg-image"></div>
+    <div class="luxe-bg-overlay"></div>
+
+     
+    <a href="index.html" class="back-home">
+        <i class="fa-solid fa-arrow-left-long"></i> <span>Return to Boutique</span>
+    </a>
+
+     
+    <div class="auth-wrapper">
+
+         
+        <div class="auth-left">
+            <span class="brand-badge"><i class="fa-solid fa-crown"></i> VIP SANCTUARY</span>
+            <h1>Enter the <br><span class="gold-text">Inner Circle</span></h1>
+            <p>Sign in to manage your bespoke tailoring, track premium shipments, and access our exclusive seasonal
+                collections before anyone else.</p>
+
+            <div class="brand-stats">
+                <div class="stat">
+                    <h2>25+</h2><span>Years Heritage</span>
+                </div>
+                <div class="stat">
+                    <h2>10K+</h2><span>Elite Members</span>
+                </div>
+            </div>
+        </div>
+
+         
+        <div class="auth-card">
+
+            <div class="logo-header">
+                <div class="logo">
+                    <img src="./asset/logo1.webp" alt="Company Logo" class="logo-img">
+                </div>
+            </div>
+
+             
+            <div class="tab-buttons">
+                <button class="active" id="loginBtn">Login</button>
+                <button id="signupBtn">Register</button>
+            </div>
+
+             
+            <form id="loginForm" novalidate>
+                <h2 class="form-title">Welcome Back</h2>
+                <p class="subtitle">Access your personal sanctuary.</p>
+
+                <select id="loginRole" class="luxe-input" required>
+                    <option value="" disabled selected>Select Account Type</option>
+                    <option value="admin">Admin</option>
+                    <option value="user"> Client</option>
+                </select>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="loginEmail" class="luxe-input" placeholder="Email Address" required>
+                </div>
+                <span class="error-msg" id="loginEmailError"></span>
+
+                <div class="password-box">
+                    <i class="fa-solid fa-lock lock-icon"></i>
+                    <input type="password" id="loginPassword" class="luxe-input" placeholder="Password" required>
+                    <i class="fa-solid fa-eye toggle-password"></i>
+                </div>
+                <span class="error-msg" id="loginPasswordError"></span>
+
+                <div class="options">
+                    <label class="remember-me"><input type="checkbox" id="rememberMe"> Remember Me</label>
+                    <a href="404.html">Forgot Password?</a>
+                </div>
+
+                <button class="main-btn" type="submit">Secure Login</button>
+
+                <div class="bottom-text">
+                    New to Luxe? <span id="showSignup">Request Access</span>
+                </div>
+            </form>
+
+             
+            <form id="signupForm" class="hidden" novalidate>
+                <h2 class="form-title">Join The Elite</h2>
+                <p class="subtitle">Create your bespoke identity.</p>
+
+                <select id="signupRole" class="luxe-input" required>
+                    <option value="" disabled selected>Select Account Type</option>
+                    <option value="admin"> Admin</option>
+                    <option value="user"> Client</option>
+                </select>
+
+                <div class="input-box">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" id="signupName" class="luxe-input" placeholder="Full Name" required>
+                </div>
+                <span class="error-msg" id="signupNameError"></span>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="signupEmail" class="luxe-input" placeholder="Email Address" required>
+                </div>
+                <span class="error-msg" id="signupEmailError"></span>
+
+                <div class="password-box">
+                    <i class="fa-solid fa-lock lock-icon"></i>
+                    <input type="password" id="signupPassword" class="luxe-input" placeholder="Password" required>
+                    <i class="fa-solid fa-eye toggle-password"></i>
+                </div>
+                <span class="error-msg" id="signupPasswordError"></span>
+
+                <div class="password-box">
+                    <i class="fa-solid fa-shield-check lock-icon"></i>
+                    <input type="password" id="signupConfirmPassword" class="luxe-input" placeholder="Confirm Password"
+                        required>
+                    <i class="fa-solid fa-eye toggle-password"></i>
+                </div>
+                <span class="error-msg" id="signupConfirmError"></span>
+
+                <button type="submit" class="main-btn">Create Account</button>
+
+                <div class="bottom-text">
+                    Already a member? <span id="showLogin">Sign In</span>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>

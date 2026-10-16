@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page </title>
+
+     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+         
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+         
+        :root {
+            --primary-color: #2C3E50;
+             
+            --accent-color: #D4AF37;
+             
+            --text-white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+        }
+
+         
+        body::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: floatBlob 10s infinite alternate ease-in-out;
+            z-index: 1;
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            bottom: -10%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: floatBlob 12s infinite alternate-reverse ease-in-out;
+            z-index: 1;
+        }
+
+        @keyframes floatBlob {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(50px, 50px);
+            }
+        }
+
+         
+        .error-container {
+            position: relative;
+            z-index: 10;
+            padding: 40px;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+         
+        .error-code {
+            font-size: 160px;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 10px;
+             
+            background: linear-gradient(to right, #D4AF37 0%, #FFFFFF 50%, #D4AF37 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 4s infinite linear, floating 4s infinite ease-in-out;
+        }
+
+        @keyframes shine {
+            0% {
+                background-position: 200% center;
+            }
+
+            100% {
+                background-position: 0% center;
+            }
+        }
+
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+         
+        .error-container h2 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .error-container p {
+            font-size: 16px;
+            color: #cbd5e1;
+            max-width: 500px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+         
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+         
+        .btn {
+            padding: 14px 35px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+         
+        .btn-gold {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.5);
+            background-color: #fff;
+        }
+
+         
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--text-white);
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-4px);
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+         
+        @media screen and (max-width: 768px) {
+            .error-code {
+                font-size: 110px;
+            }
+
+            .error-container h2 {
+                font-size: 24px;
+            }
+
+            .error-container p {
+                font-size: 14px;
+                padding: 0 20px;
+            }
+
+            .btn-group {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+
+            .btn {
+                width: 80%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="error-container">
+        <h1 class="error-code">404</h1>
+        <h2>Oops! Page Not Found</h2>
+        <p>The exclusive page you are looking for might have been removed, had its name changed, or is temporarily
+            unavailable.</p>
+
+        <div class="btn-group">
+             
+            <button class="btn btn-outline" onclick="goBack()"><i class="fa-solid fa-arrow-left"></i> Go Back</button>
+
+             
+            <a href="index.html" class="btn btn-gold"><i class="fa-solid fa-crown"></i> Go to Home</a>
+        </div>
+    </div>
+
+    <script>
+ 
+        function goBack() {
+ 
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+ 
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

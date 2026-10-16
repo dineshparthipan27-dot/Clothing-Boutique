@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="collections.css">
+    <link rel="stylesheet" href="clothing.css">
+</head>
+
+<body>
+
+    <div id="luxe-preloader" class="luxe-preloader">
+    <div class="preloader-content">
+    
+        <div class="preloader-logo">
+            <i class="fa-solid fa-crown"></i> STACKLY
+        </div>
+        
+      
+        <div class="preloader-line-wrapper">
+            <div class="preloader-line"></div>
+        </div>
+        
+        
+        <div class="preloader-text">Curating Elegance...</div>
+    </div>
+</div>
+
+    <nav class="navbar">
+         <a href="index.html" class="logo-container">
+            <img src="./asset/logo.webp" alt="Company Logo" class="logo-img">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="brand.html">The Brand</a></li>
+            <li><a href="collections.html" class="active">Collections</a></li>
+            <li><a href="exclusive.html">Exclusive Perks</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="mobile-login"><a href="login.html" class="login-btn">Login</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="cart-icon">
+                <a href="404.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                <span class="cart-count">2</span>
+            </div>
+            <a href="login.html" class="login-btn desktop-login">Login</a>
+
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- =========================================
+     Section 1: Premium Collections Slider (Center Aligned)
+     ========================================= -->
+    <section id="collections-slider" class="premium-slider-section">
+
+         
+        <div class="hero-slide active">
+            <div class="slide-bg" style="background-image: url('./asset/clo26.webp');"></div>
+            <div class="slide-overlay"></div>
+            <div class="container slide-content text-center">
+                <h1 class="slide-title">The Autumn/Winter <br><span class="gold-text">Edit '26</span></h1>
+                <p class="slide-desc">Embrace the new season with rich textures, deep charcoal tones, and soft pearl
+                    accents crafted for the modern visionary.</p>
+                <div class="slide-actions">
+                    <a href="404.html" class="btn-solid-gold">Shop Women</a>
+                    <a href="404.html" class="btn-outline-light">Shop Men</a>
+                </div>
+            </div>
+        </div>
+
+         
+        <div class="hero-slide">
+            <div class="slide-bg" style="background-image: url('./asset/clo25.webp');"></div>
+            <div class="slide-overlay"></div>
+            <div class="container slide-content text-center">
+                <h1 class="slide-title">Spring Resort <br><span class="gold-text">Collection</span></h1>
+                <p class="slide-desc">Lightweight fabrics, flowing silhouettes, and breathtaking elegance designed for
+                    your ultimate luxury getaways.</p>
+                <div class="slide-actions">
+                    <a href="404.html" class="btn-solid-gold">Explore New Arrivals</a>
+                </div>
+            </div>
+        </div>
+
+         
+        <div class="hero-slide">
+            <div class="slide-bg" style="background-image: url('./asset/clo24.webp');"></div>
+            <div class="slide-overlay"></div>
+            <div class="container slide-content text-center">
+                <h1 class="slide-title">The Gala <br><span class="gold-text">Exclusives</span></h1>
+                <p class="slide-desc">Make an unforgettable entrance. Discover our limited-edition bespoke tailoring and
+                    premium evening wear.</p>
+                <div class="slide-actions">
+                    <a href="404.html" class="btn-solid-gold">View Lookbook</a>
+                    <a href="404.html" class="btn-outline-light">Book Fitting</a>
+                </div>
+            </div>
+        </div>
+
+         
+        <div class="slider-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+     Section 2: Curated Categories (Filter)
+     ========================================= -->
+    <section id="categories" class="premium-filter-section">
+        <div class="container">
+
+             
+            <div class="section-header text-center" data-aos="fade-up" data-aos-duration="1000">
+
+                <h2 class="section-title">Curated <span class="gold-text">Collections</span></h2>
+                <div class="title-divider"></div>
+                <p class="section-desc">Explore our handpicked selections across categories. Tailored perfection for
+                    every occasion.</p>
+            </div>
+
+             
+            <div class="filter-controls" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <button class="filter-btn active" data-filter="all">All Pieces</button>
+                <button class="filter-btn" data-filter="women">Women's Edit</button>
+                <button class="filter-btn" data-filter="men">Men's Tailoring</button>
+                <button class="filter-btn" data-filter="accessories">Accessories</button>
+            </div>
+
+             
+            <div class="filter-grid" id="product-grid">
+
+                 
+                <div class="filter-item" data-category="women" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="300">
+                    <div class="item-img-wrapper">
+                        <img src="./asset/clo9.webp" alt="Silk Gown" class="item-img">
+                        <div class="item-overlay">
+                            <a href="404.html" class="btn-quick-view"> Quick View</a>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <span class="item-cat">Women's Edit</span>
+                        <h4 class="item-name">Midnight Silk Gown</h4>
+                        <p class="item-price">$850.00</p>
+                    </div>
+                </div>
+
+                 
+                <div class="filter-item" data-category="men" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="400">
+                    <div class="item-img-wrapper">
+                        <img src="./asset/clo10.webp" alt="Tailored Suit" class="item-img">
+                        <div class="item-overlay">
+                            <a href="404.html" class="btn-quick-view"> Quick View</a>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <span class="item-cat">Men's Tailoring</span>
+                        <h4 class="item-name">Charcoal Classic Suit</h4>
+                        <p class="item-price">$1,200.00</p>
+                    </div>
+                </div>
+
+                 
+                <div class="filter-item" data-category="accessories" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="500">
+                    <div class="item-img-wrapper">
+                        <img src="./asset/clo11.webp" alt="Leather Bag" class="item-img">
+                        <div class="item-overlay">
+                            <a href="404.html" class="btn-quick-view"> Quick View</a>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <span class="item-cat">Accessories</span>
+                        <h4 class="item-name">Signature Leather Tote</h4>
+                        <p class="item-price">$450.00</p>
+                    </div>
+                </div>
+
+                 
+                <div class="filter-item" data-category="women" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="300">
+                    <div class="item-img-wrapper">
+                        <img src="./asset/clo12.webp" alt="Blouse" class="item-img">
+                        <div class="item-overlay">
+                            <a href="404.html" class="btn-quick-view"> Quick View</a>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <span class="item-cat">Women's Edit</span>
+                        <h4 class="item-name">Pearl Chiffon Blouse</h4>
+                        <p class="item-price">$320.00</p>
+                    </div>
+                </div>
+
+                 
+                <div class="filter-item" data-category="men" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="400">
+                    <div class="item-img-wrapper">
+                        <img src="./asset/clo13.webp" alt="Jacket" class="item-img">
+                        <div class="item-overlay">
+                            <a href="404.html" class="btn-quick-view"> Quick View</a>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <span class="item-cat">Men's Tailoring</span>
+                        <h4 class="item-name">Vintage Leather Jacket</h4>
+                        <p class="item-price">$680.00</p>
+                    </div>
+                </div>
+
+                 
+                <div class="filter-item" data-category="accessories" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="500">
+                    <div class="item-img-wrapper">
+                        <img src="./asset/clo14.webp" alt="Watch" class="item-img">
+                        <div class="item-overlay">
+                            <a href="404.html" class="btn-quick-view"> Quick View</a>
+                        </div>
+                    </div>
+                    <div class="item-info">
+                        <span class="item-cat">Accessories</span>
+                        <h4 class="item-name">Rose Gold Timepiece</h4>
+                        <p class="item-price">$890.00</p>
+                    </div>
+                </div>
+
+            </div>
+
+             
+            <div class="text-center" style="margin-top: 50px;" data-aos="fade-up">
+                <a href="404.html" class="btn-outline-dark">Explore Full Catalog</a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- =========================================
+     Section 3: Signature Masterpieces (White Theme)
+     ========================================= -->
+    <section id="bestsellers" class="premium-bestsellers-section-white">
+        <div class="container">
+
+             
+            <div class="bs-header-center">
+
+
+                <div class="text-mask-center">
+                    <h2 class="bs-title anim-up delay-2">Signature <span class="gold-text">Masterpieces</span></h2>
+                </div>
+
+                <div class="text-mask-center">
+                    <div class="bs-divider anim-up delay-3"></div>
+                </div>
+
+                <div class="text-mask-center">
+                    <p class="bs-desc anim-up delay-4">
+                        Discover our most coveted pieces. The epitome of Luxe craftsmanship, loved by visionaries
+                        worldwide.
+                    </p>
+                </div>
+            </div>
+
+             
+            <div class="bs-grid">
+
+                 
+                <div class="bs-card anim-up delay-5">
+                    <div class="bs-img-wrapper">
+                        <div class="bs-badge">Signature</div>
+                        <img src="./asset/clo15.webp" alt="Tuxedo" class="bs-img">
+
+                         
+                        <div class="bs-action-bar">
+                            <a href="404.html" class="bs-action-link"> Add to Cart</a>
+                            <a href="404.html" class="bs-action-icon" title="Quick View"></a>
+                        </div>
+                    </div>
+                    <div class="bs-info">
+                        <span class="bs-category">Men's Tailoring</span>
+                        <h4 class="bs-name">The Sovereign Tuxedo</h4>
+                        <p class="bs-price">$1,450.00</p>
+                    </div>
+                </div>
+
+                 
+                <div class="bs-card anim-up delay-6">
+                    <div class="bs-img-wrapper">
+                        <div class="bs-badge">Best Seller</div>
+                        <img src="./asset/clo16.webp" alt="Gown" class="bs-img">
+
+                        <div class="bs-action-bar">
+                            <a href="404.html" class="bs-action-link"> Add to Cart</a>
+                            <a href="404.html" class="bs-action-icon" title="Quick View"></a>
+                        </div>
+                    </div>
+                    <div class="bs-info">
+                        <span class="bs-category">Women's Evening Wear</span>
+                        <h4 class="bs-name">Midnight Pearl Gown</h4>
+                        <p class="bs-price">$2,100.00</p>
+                    </div>
+                </div>
+
+                 
+                <div class="bs-card anim-up delay-7">
+                    <div class="bs-img-wrapper">
+                        <div class="bs-badge">Trending</div>
+                        <img src="./asset/clo17.webp" alt="Tote Bag" class="bs-img">
+
+                        <div class="bs-action-bar">
+                            <a href="404.html" class="bs-action-link"> Add to Cart</a>
+                            <a href="404.html" class="bs-action-icon" title="Quick View"></a>
+                        </div>
+                    </div>
+                    <div class="bs-info">
+                        <span class="bs-category">Accessories</span>
+                        <h4 class="bs-name">Monogram Leather Tote</h4>
+                        <p class="bs-price">$850.00</p>
+                    </div>
+                </div>
+
+                 
+                <div class="bs-card anim-up delay-8">
+                    <div class="bs-img-wrapper">
+                        <div class="bs-badge">Signature</div>
+                        <img src="./asset/clo18.webp" alt="Silk Trench" class="bs-img">
+
+                        <div class="bs-action-bar">
+                            <a href="404.html" class="bs-action-link"> Add to Cart</a>
+                            <a href="404.html" class="bs-action-icon" title="Quick View"></a>
+                        </div>
+                    </div>
+                    <div class="bs-info">
+                        <span class="bs-category">Women's Outerwear</span>
+                        <h4 class="bs-name">Classic Silk Trench</h4>
+                        <p class="bs-price">$1,150.00</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================
+     Section 4: Bespoke Exclusives (White Theme & Overlap Design)
+     ========================================= -->
+    <section id="bespoke" class="premium-bespoke-white">
+        <div class="container bespoke-container">
+
+             
+            <div class="bespoke-banner-wrapper">
+                <img src="./asset/clo26.webp" alt="Bespoke Tailoring" class="bespoke-banner-img">
+            </div>
+
+             
+            <div class="bespoke-content-card">
+
+                <div class="text-mask">
+                    <div class="bespoke-badge anim-up delay-1">
+                        <i class="fa-solid fa-signature"></i> Tailored For You
+                    </div>
+                </div>
+
+                <div class="text-mask">
+                    <h2 class="bespoke-title anim-up delay-2">Bespoke <br><span class="gold-text">Exclusives</span></h2>
+                </div>
+
+                <div class="text-mask">
+                    <div class="bespoke-divider anim-up delay-3"></div>
+                </div>
+
+                <div class="text-mask">
+                    <p class="bespoke-desc anim-up delay-4">
+                        Experience the ultimate luxury of garments tailored exclusively for your silhouette. Our bespoke
+                        service bridges the gap between heritage craftsmanship and your uncompromising personal style.
+                        Every stitch is a reflection of you.
+                    </p>
+                </div>
+
+                 
+                <div class="bespoke-features">
+                    <div class="text-mask">
+                        <div class="bf-item anim-up delay-5">
+                            <i class="fa-solid fa-tape"></i> Exacting Measurements
+                        </div>
+                    </div>
+                    <div class="text-mask">
+                        <div class="bf-item anim-up delay-6">
+                            <i class="fa-solid fa-swatchbook"></i> Exclusive Fabrics
+                        </div>
+                    </div>
+                    <div class="text-mask">
+                        <div class="bf-item anim-up delay-7">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Personal Styling
+                        </div>
+                    </div>
+                </div>
+
+                 
+                <div class="text-mask" style="margin-top: 40px;">
+                    <a href="404.html" class="elegant-arrow-link anim-up delay-8">
+                        Book Your Fitting <i class="fa-solid fa-arrow-right-long"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================================
+     Section 5: Runway Inspirations (Style Gallery)
+     ========================================= -->
+    <section id="gallery" class="premium-gallery-section">
+        <div class="container">
+
+             
+            <div class="gallery-header-center">
+                <div class="text-mask-center">
+                    <div class="gallery-badge anim-up delay-1">
+                        <i class="fa-solid fa-camera-retro"></i> Style Gallery
+                    </div>
+                </div>
+
+                <div class="text-mask-center">
+                    <h2 class="gallery-title anim-up delay-2">Runway <span class="gold-text">Inspirations</span></h2>
+                </div>
+
+                <div class="text-mask-center">
+                    <div class="gallery-divider anim-up delay-3"></div>
+                </div>
+
+                <div class="text-mask-center">
+                    <p class="gallery-desc anim-up delay-4">
+                        Direct from the global fashion capitals. Explore the avant-garde silhouettes, bold textures, and
+                        visionary designs that inspire our latest bespoke creations.
+                    </p>
+                </div>
+            </div>
+
+             
+            <div class="runway-grid">
+
+                 
+                <div class="text-mask runway-item item-tall">
+                    <div class="runway-img-wrap anim-up delay-5">
+                        <img src="./asset/clo12.webp" alt="Runway Model" class="r-img">
+                        <div class="r-overlay">
+                            <h4>Paris Fashion Week</h4>
+                            <p>Autumn / Winter '26</p>
+                            <span class="r-explore">View Look <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                 
+                <div class="text-mask runway-item item-square">
+                    <div class="runway-img-wrap anim-up delay-6">
+                        <img src="./asset/clo3.webp" alt="Detail Shot" class="r-img">
+                        <div class="r-overlay">
+                            <h4>Milan Exclusives</h4>
+                            <p>Bespoke Details</p>
+                            <span class="r-explore">View Look <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                 
+                <div class="text-mask runway-item item-tall">
+                    <div class="runway-img-wrap anim-up delay-7">
+                        <img src="./asset/clo4.webp" alt="Runway Model" class="r-img">
+                        <div class="r-overlay">
+                            <h4>New York Collection</h4>
+                            <p>Urban Elegance</p>
+                            <span class="r-explore">View Look <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                 
+                <div class="text-mask runway-item item-square">
+                    <div class="runway-img-wrap anim-up delay-8">
+                        <img src="./asset/clo5.webp" alt="Runway Shot" class="r-img">
+                        <div class="r-overlay">
+                            <h4>London Avant-Garde</h4>
+                            <p>Modern Tailoring</p>
+                            <span class="r-explore">View Look <i class="fa-solid fa-arrow-right-long"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- =========================================
+     Section 6: The Vault (Limited Editions)
+     ========================================= -->
+    <section id="vault" class="premium-vault-section">
+        <div class="container">
+
+             
+            <div class="vault-header-center">
+                <div class="text-mask-center">
+                    <div class="vault-badge anim-up delay-1">
+                        <i class="fa-solid fa-lock"></i> Strictly Limited
+                    </div>
+                </div>
+
+                <div class="text-mask-center">
+                    <h2 class="vault-title anim-up delay-2">The <span class="gold-text">Vault</span></h2>
+                </div>
+
+                <div class="text-mask-center">
+                    <div class="vault-divider anim-up delay-3"></div>
+                </div>
+
+                <div class="text-mask-center">
+                    <p class="vault-desc anim-up delay-4">
+                        Rare, numbered, and exceptionally crafted. These limited-edition masterpieces are available only
+                        to our most discerning clientele. Once they are gone, they are archived forever.
+                    </p>
+                </div>
+            </div>
+
+             
+            <div class="vault-grid">
+
+                 
+                <div class="vault-item anim-up delay-5">
+                    <div class="v-img-wrap">
+                        <span class="v-stock-badge">Only 5 Left Worldwide</span>
+                        <img src="./asset/clo6.webp" alt="Obsidian Tuxedo" class="v-img">
+
+                         
+                        <div class="v-hover-action">
+                            <a href="404.html" class="v-btn-access">
+                                Request Access <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="v-details">
+                        <h4>Obsidian Velvet Tuxedo</h4>
+                        <p>Edition: 05 / 50</p>
+                    </div>
+                </div>
+
+                 
+                <div class="vault-item anim-up delay-6">
+                    <div class="v-img-wrap">
+                        <span class="v-stock-badge">Only 2 Left Worldwide</span>
+                        <img src="./asset/clo7.webp" alt="Crystal Gown" class="v-img">
+
+                        <div class="v-hover-action">
+                            <a href="404.html" class="v-btn-access">
+                                Request Access <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="v-details">
+                        <h4>Sapphire Crystal Gown</h4>
+                        <p>Edition: 12 / 15</p>
+                    </div>
+                </div>
+
+                 
+                <div class="vault-item anim-up delay-7">
+                    <div class="v-img-wrap">
+                        <span class="v-stock-badge">Only 8 Left Worldwide</span>
+                        <img src="./asset/clo8.webp" alt="Bespoke Coat" class="v-img">
+
+                        <div class="v-hover-action">
+                            <a href="404.html" class="v-btn-access">
+                                Request Access <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="v-details">
+                        <h4>Cashmere Winter Coat</h4>
+                        <p>Edition: 42 / 50</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- =========================================
+     Section 7: Unlock The Catalog (CTA with Image & Validation)
+     ========================================= -->
+    <section id="catalog-cta" class="premium-cta-section">
+
+         
+        <div class="cta-bg-overlay"></div>
+
+        <div class="container">
+
+             
+            <div class="cta-header-center">
+
+                <div class="text-mask-center">
+                    <div class="cta-icon anim-up delay-1">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                </div>
+
+                <div class="text-mask-center">
+                    <h2 class="cta-title anim-up delay-2">Unlock The <span class="gold-text">Catalog</span></h2>
+                </div>
+
+                <div class="text-mask-center">
+                    <div class="cta-divider anim-up delay-3"></div>
+                </div>
+
+                <div class="text-mask-center">
+                    <p class="cta-desc anim-up delay-4">
+                        Join our exclusive inner circle. Enter your email to receive our complete curated catalog,
+                        featuring unreleased bespoke designs and priority access to our upcoming collections.
+                    </p>
+                </div>
+
+                 
+                <div class="text-mask-center" style="width: 100%;">
+                    <div class="form-wrapper anim-up delay-5">
+                         
+                        <form id="catalogForm" class="cta-form" novalidate>
+                            <input type="email" id="catalogEmail" class="cta-input"
+                                placeholder="Enter your email address...">
+                            <button type="submit" class="cta-submit-btn">
+                                Unlock Now <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </form>
+                         
+                        <div id="ctaErrorMsg" class="cta-error-msg"></div>
+                    </div>
+                </div>
+
+                 
+                <div id="catalogSuccess" class="cta-success-msg">
+                    <i class="fa-solid fa-circle-check"></i> Catalog successfully sent to your inbox!
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-grid">
+
+
+                <div class="footer-brand" data-aos="fade-up" data-aos-delay="100">
+                    <a href="index.html" class="logo-container">
+                        <img src="./asset/logo1.webp" alt="Company Logo" class="logo-img">
+                    </a>
+                    <p>Redefining elegance and modern luxury. Discover handpicked fashion that speaks your unique style.
+                    </p>
+                    <div class="social-icons">
+
+                        <a href="404.html" style="display:inline-flex; align-items:center; justify-content:center;">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 448 512">
+                                <path
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                            </svg>
+                        </a>
+
+
+                        <a href="404.html" style="display:inline-flex; align-items:center; justify-content:center;">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 320 512">
+                                <path
+                                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                            </svg>
+                        </a>
+
+
+                        <a href="404.html" style="display:inline-flex; align-items:center; justify-content:center;">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 512 512">
+                                <path
+                                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                            </svg>
+                        </a>
+
+
+                        <a href="404.html" style="display:inline-flex; align-items:center; justify-content:center;">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 496 512">
+                                <path
+                                    d="M248 8C111.03 8 0 119.03 0 256c0 105.57 65.51 195.48 159.27 236.42-2.12-19.46-4.04-49.32.84-70.6 4.31-18.8 27.81-118.06 27.81-118.06s-7.1-14.2-7.1-35.19c0-32.96 19.12-57.54 42.92-57.54 19.98 0 29.62 14.99 29.62 32.96 0 20.08-12.79 50.15-19.4 77.96-5.54 23.3 11.68 42.36 34.72 42.36 41.67 0 73.74-43.91 73.74-107.3 0-55.8-40.12-94.88-97.43-94.88-66.2 0-105.15 49.69-105.15 101.01 0 20.08 7.74 41.6 17.41 53.3 1.91 2.31 2.19 4.41 1.63 6.64-1.74 7.02-5.61 22.82-6.39 26.06-1.04 4.34-3.46 5.25-7.9 3.19-29.41-13.6-47.8-56.24-47.8-90.43 0-73.66 53.51-141.34 154.26-141.34 81.1 0 144.15 57.73 144.15 134.82 0 80.6-50.79 145.45-121.28 145.45-23.71 0-46.03-12.33-53.67-26.88 0 0-11.75 44.75-14.6 55.75-5.28 20.44-19.5 45.98-29.08 61.64 22.56 6.94 46.52 10.66 71.07 10.66 136.97 0 248-111.03 248-248S384.97 8 248 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+                        <li><a href="brand.html"><i class="fa-solid fa-angle-right"></i> The Brand</a></li>
+                        <li><a href="collections.html"><i class="fa-solid fa-angle-right"></i> Collection</a></li>
+                        <li><a href="exclusive.html"><i class="fa-solid fa-angle-right"></i> Exclusive Perks</a></li>
+                        <li><a href="brand.html"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Customer Care</h3>
+                    <ul>
+                        <li><a href="404.html"><i class="fa-solid fa-angle-right"></i> Track Your Order</a></li>
+                        <li><a href="404.html"><i class="fa-solid fa-angle-right"></i> Shipping & Returns</a></li>
+                        <li><a href="404.html"><i class="fa-solid fa-angle-right"></i> Size Guide</a></li>
+                        <li><a href="404.html"><i class="fa-solid fa-angle-right"></i> FAQ</a></li>
+                        <li><a href="404.html"><i class="fa-solid fa-angle-right"></i> Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-contact" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> 123 Luxury Avenue, Fashion District, NY 10001</li>
+                        <li><i class="fa-solid fa-phone"></i> +1 (800) 123-4567</li>
+                        <li><i class="fa-solid fa-envelope"></i> support@luxeboutique.com</li>
+                        <li><i class="fa-solid fa-clock"></i> Mon - Sat: 9:00 AM - 8:00 PM</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>&copy; 2026 Luxe Boutique. All Rights Reserved. </p>
+            </div>
+
+
+            <div class="footer-legal">
+                <a href="404.html">Privacy Policy</a>
+                <span class="separator">|</span>
+                <a href="404.html">Terms of Service</a>
+            </div>
+        </div>
+
+
+        <a href="index.html" id="scroll-top-btn" class="scroll-top-btn"><i class="fa-solid fa-arrow-up"></i></a>
+    </footer>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 50
+            });
+        });
+    </script>
+
+    <script>
+ 
+ 
+ 
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.dot');
+        let slideInterval;
+
+        function showSlide(index) {
+            if (index >= slides.length) slideIndex = 0;
+            if (index < 0) slideIndex = slides.length - 1;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            slides[slideIndex].classList.add('active');
+            dots[slideIndex].classList.add('active');
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            showSlide(slideIndex);
+            resetInterval();
+        }
+
+        function prevSlide() {
+            slideIndex--;
+            showSlide(slideIndex);
+            resetInterval();
+        }
+
+        function goToSlide(index) {
+            slideIndex = index;
+            showSlide(slideIndex);
+            resetInterval();
+        }
+
+        function startAutoSlide() {
+            slideInterval = setInterval(nextSlide, 6000);
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            startAutoSlide();
+        }
+
+        if (slides.length > 0) {
+            showSlide(slideIndex);
+            startAutoSlide();
+        }
+
+
+
+ 
+ 
+ 
+        document.addEventListener("DOMContentLoaded", function () {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const filterItems = document.querySelectorAll('.filter-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+ 
+                    filterBtns.forEach(b => b.classList.remove('active'));
+
+ 
+                    this.classList.add('active');
+
+ 
+                    const filterValue = this.getAttribute('data-filter');
+
+ 
+                    filterItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+ 
+                            item.style.animation = 'none';
+                            item.offsetHeight; // trigger reflow
+                            item.style.animation = null;
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+
+
+
+
+ 
+ 
+ 
+        document.addEventListener("DOMContentLoaded", function () {
+            const catalogForm = document.getElementById('catalogForm');
+
+            if (catalogForm) {
+                catalogForm.addEventListener('submit', function (e) {
+                    e.preventDefault(); // Prevents page reload
+
+                    const emailInput = document.getElementById('catalogEmail').value.trim();
+                    const errorMsg = document.getElementById('ctaErrorMsg');
+                    const successMsg = document.getElementById('catalogSuccess');
+
+ 
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+ 
+                    if (emailInput === '') {
+                        errorMsg.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Please enter your email address.';
+                        errorMsg.style.display = 'block';
+                    }
+                    else if (!emailRegex.test(emailInput)) {
+                        errorMsg.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Please enter a valid email format (e.g. name@example.com).';
+                        errorMsg.style.display = 'block';
+                    }
+                    else {
+ 
+                        errorMsg.style.display = 'none';
+                        catalogForm.style.display = 'none';
+                        window.location.href = '404.html'
+                        successMsg.style.display = 'flex';
+
+ 
+                        setTimeout(() => {
+                            catalogForm.style.display = 'flex';
+                            successMsg.style.display = 'none';
+                            catalogForm.reset();
+                        }, 400);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
